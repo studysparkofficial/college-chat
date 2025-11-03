@@ -1,0 +1,103 @@
+/* General Setup and Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6; /* Light, subtle background */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  min-height: 100vh;      /* Full viewport height */
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container for the main content */
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 100%;
+  max-width: 400px; /* Restrict width for better readability */
+  text-align: center;
+}
+
+/* Heading Style */
+h1 {
+  color: #333333;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+/* Tagline Style */
+.tagline {
+  color: #6a6a6a;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+/* Input Fields */
+.login-form input[type="text"] {
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input[type="text"]:focus {
+  border-color: #007bff; /* Focus color */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none; /* Remove default focus outline */
+}
+
+/* Button Styling */
+.login-form button[type="submit"] {
+  background-color: #007bff; /* Primary button color (College Blue) */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-form button[type="submit"]:active {
+  transform: scale(0.99); /* Slight press effect */
+}
+
+/* Footer Text */
+.footer-text {
+  margin-top: 30px;
+  color: #aaaaaa;
+  font-size: 0.9em;
+}
+
+/* Optional: Make the chat icon in the H1 stand out slightly */
+h1:after {
+  content: " 💬";
+  display: inline-block;
+  color: #ff6347; /* A bright color for the emoji */
+}
+
+/* Responsive adjustment for very small screens (optional) */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+}
