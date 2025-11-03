@@ -3,45 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Spark Official</title>
+  <title>College Chat</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Study Spark Official</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <h1>Welcome to College Chat 💬</h1>
+    <p class="tagline">Talk with your college mates instantly — just enter your name and branch!</p>
 
-  <section class="hero">
-    <h2>Ignite Your Knowledge</h2>
-    <p>Empowering students with structured learning, mock tests, and smart revision.</p>
-    <a href="#" class="btn">Get Started</a>
-  </section>
+    <form action="chat.html" method="get" class="login-form">
+      <input type="text" name="name" placeholder="Enter your Name" required />
+      <input type="text" name="branch" placeholder="Enter your Branch (e.g., CSE)" required />
+      <button type="submit">Join Chat</button>
+    </form>
 
-  <section class="features">
-    <div class="card">
-      <h3>Interactive Learning</h3>
-      <p>Engage with high-quality study materials and quizzes.</p>
-    </div>
-    <div class="card">
-      <h3>AI-Powered Insights</h3>
-      <p>Track your performance and improve smartly.</p>
-    </div>
-    <div class="card">
-      <h3>Community Support</h3>
-      <p>Join a community of learners and mentors.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Study Spark Official | Designed with ❤️ by Study Spark</p>
-  </footer>
+    <p class="footer-text">Made with ❤️ for College Students</p>
+  </div>
 </body>
 </html>
