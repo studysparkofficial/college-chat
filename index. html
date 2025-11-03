@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Spark Official</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Study Spark Official</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Ignite Your Knowledge</h2>
+    <p>Empowering students with structured learning, mock tests, and smart revision.</p>
+    <a href="#" class="btn">Get Started</a>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Interactive Learning</h3>
+      <p>Engage with high-quality study materials and quizzes.</p>
+    </div>
+    <div class="card">
+      <h3>AI-Powered Insights</h3>
+      <p>Track your performance and improve smartly.</p>
+    </div>
+    <div class="card">
+      <h3>Community Support</h3>
+      <p>Join a community of learners and mentors.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Study Spark Official | Designed with ❤️ by Study Spark</p>
+  </footer>
+</body>
+</html>
