@@ -23,26 +23,54 @@
     </form>
   </div>
 
+  <!-- Load Socket.io -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
   <script>
+    // Connect frontend to backend
     const socket = io("https://college-chat-backend.onrender.com");
-    // Temporary frontend behavior (no backend yet)
+
+    // Get name & branch from login page URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const branch = params.get('branch');
+
+    // Notify backend that this user joined
+    socket.emit('join', { name, branch });
+
     const form = document.getElementById('chat-form');
     const input = document.getElementById('message');
     const chatBox = document.getElementById('chat-box');
 
+    // Send message
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const msg = input.value.trim();
       if (msg) {
-        const div = document.createElement('div');
-        div.className = 'message user';
-        div.textContent = msg;
-        chatBox.appendChild(div);
-        chatBox.scrollTop = chatBox.scrollHeight;
+        socket.emit('chatMessage', msg);
         input.value = '';
       }
     });
 
+    // Receive message from backend
+    socket.on('chatMessage', (data) => {
+      const div = document.createElement('div');
+      div.className = 'message user';
+      div.textContent = `${data.name} (${data.branch}): ${data.text}`;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+
+    // System messages (join/leave notifications)
+    socket.on('systemMessage', (data) => {
+      const div = document.createElement('div');
+      div.className = 'message system';
+      div.textContent = data.text;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+
+    // Logout
     document.getElementById('logout').addEventListener('click', () => {
       window.location.href = 'index.html';
     });
